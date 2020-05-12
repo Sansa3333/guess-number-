@@ -1,0 +1,47 @@
+
+# 猜数字小组2 反复游戏 ：
+
+import random
+name = input('请输入你的名字： ')
+time = 0
+total =0
+
+
+while True:
+    time +=1
+    num = random.randint(1,10)
+    count=0
+    while True:
+        ans = int(input('请猜一个 1 - 100 的数字 ：'))
+        total +=1
+        count +=1
+        if ans >  num :
+            print('%s, 你猜大了，再试试：' % name)
+        elif ans <  num :
+            print('%s, 你猜小了，再试试：' % name)
+        else:
+            print('%s, 你猜对了，一共猜了%d轮' % (name, count))
+            break
+    if time== 1:
+        best = count
+    else:
+        if best > count:
+            best = count
+
+            
+
+
+    best = count
+    ave = total/time
+    print('%s, 你一共玩了%d次，最少%d轮猜出答案,平均%d轮猜出答案”' % (name, time, best,ave))      
+    con=input('是否继续游戏？(输入y继续;其它退出)')
+    if con != "y"  :   
+        print('退出游戏，欢迎下次再来！')
+        break
+
+        
+    
+# 错误汇总：
+# 1 最小如何判断
+
+
