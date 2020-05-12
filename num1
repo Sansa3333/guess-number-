@@ -1,0 +1,28 @@
+
+# 猜数字小组1 ：
+
+import random
+
+count = 0
+num = random.randint(1,100)
+
+
+while True:
+    ans = int(input('请猜一个 1 - 100 的数字 ：'))
+    count +=1 
+    if ans >  num :
+        print('猜大了，再试试：')
+        continue
+    elif ans <  num :
+        print('猜小了，再试试：')
+        continue
+    else:
+        print('猜对了，你一共猜了%d次' % count)
+        break
+
+# 错误汇总：
+# 1 while True：指的是整体循环内为对，执行。 忘记写True
+# 2 count +=1  总是忘记书写方法
+# 3 忘记continue的方法，跳出本次的执行
+# 4 需要把输入的input置于循环内部
+# 5 注意random.randint(a,b)包括边界a和b
