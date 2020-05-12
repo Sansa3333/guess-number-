@@ -2,25 +2,34 @@
 # 猜数字小组2 反复游戏 ：
 
 import random
+name = input('你的名字： ')
+time = 0
+total =0
 
-time = 0 
 while True:
     time +=1
     num = random.randint(1,100)
+    count=0
     while True:
         ans = int(input('请猜一个 1 - 100 的数字 ：'))
-        count +=1 
+        total +=1
+        count +=1
         if ans >  num :
-            print('猜大了，再试试：')
+            print('%s, 你猜大了，再试试：' % name)
         elif ans <  num :
-            print('猜小了，再试试：'
+            print('%s, 你猜小了，再试试：' % name)
         else:
-            print('猜对了，你一共猜了%d轮' % time)
+            print('%s, 你猜对了，一共猜了%d轮，这一轮猜了%d次,%d轮总共猜了%d次”' % (name, time, count, time, total))
+            break
             
-    con=str(input('是否继续游戏？/  输入y继续;其它退出'))
+    con=input('是否继续游戏？(输入y继续;其它退出)')
     if con != "y"  :   
         print('退出游戏，欢迎下次再来！')
         break
-    else:
-        contiue
+
         
+    
+# 错误汇总：
+# 1 猜几轮的嵌套方式
+
+
