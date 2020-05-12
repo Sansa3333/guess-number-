@@ -1,0 +1,26 @@
+
+# 猜数字小组2 反复游戏 ：
+
+import random
+
+time = 0 
+while True:
+    time +=1
+    num = random.randint(1,100)
+    while True:
+        ans = int(input('请猜一个 1 - 100 的数字 ：'))
+        count +=1 
+        if ans >  num :
+            print('猜大了，再试试：')
+        elif ans <  num :
+            print('猜小了，再试试：'
+        else:
+            print('猜对了，你一共猜了%d轮' % time)
+            
+    con=str(input('是否继续游戏？/  输入y继续;其它退出'))
+    if con != "y"  :   
+        print('退出游戏，欢迎下次再来！')
+        break
+    else:
+        contiue
+        
