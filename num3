@@ -10,7 +10,7 @@ min_count = 0  #最小轮数
 
 while True:
     time +=1
-    num = random.randint(1,10)
+    num = random.randint(1,100)
     count=0  # 此次轮数
     while True:
         ans = int(input('请猜一个 1 - 100 的数字 ：'))
@@ -39,7 +39,7 @@ for i in lst:
     i=str(i)
     result.append(i)
     print(i)
-result.append('\n')
+    result.append('\n')
 with open('game_one_user.txt','w',encoding='utf8') as f:
     f.writelines(result)
 
