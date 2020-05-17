@@ -66,7 +66,7 @@ while True:
         else:
             print('%s, 你猜对了，一共猜了%d轮' % (name, count))
             break
-    if min_count ==1 or count < min_count:
+    if min_count ==0 or count < min_count:
         min_count = count
 
 
@@ -81,6 +81,12 @@ print(result)
 f=open('game_one_user.txt','w',encoding='utf8')
 f.write(result)
 f.close()
+
+
+
+
+
+
 
 '''
 1. 文件的写入的要素为字符串
