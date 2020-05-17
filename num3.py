@@ -23,7 +23,7 @@ while True:
         else:
             print('%s, 你猜对了，一共猜了%d轮' % (name, count))
             break
-    if min_count ==1 or count < min_count:
+    if min_count ==0 or count < min_count:
         min_count = count
 
     print('%s, 你一共玩了%d次，最少%d轮猜出答案,平均%d轮猜出答案”' % (name, time, min_count,total/time))      
