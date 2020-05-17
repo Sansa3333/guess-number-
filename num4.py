@@ -1,5 +1,6 @@
 '''
 Guess Number 4 the best score
+
 Note:
 1. f.readline() 读取第一行;f.readlines()读取所有行
 2. 字典复习
@@ -65,7 +66,7 @@ while True:
         else:
             print('%s, 你猜对了，一共猜了%d轮' % (name, count))
             break
-    if min_count ==0 or min_count < count:
+    if min_count ==1 or count < min_count:
         min_count = count
 
 
